@@ -8,6 +8,10 @@ import { fadeIn, slideIn, textVariant } from "../utils/motion";
 import { testimonials } from "../constants";
 import StarWrapper from "../hoc/SectionWrapper";
 
+//template_m6ycyad
+//service ID: service_cb5ammq
+ // 9Eevkn-FpGU3HYRsX
+
 const Contact = () => {
   const formRef = useRef();
   const [form, setForm] = useState({
@@ -17,9 +21,40 @@ const Contact = () => {
   });
   const [loading, setLoading] = useState(false);
 
-  const handleChange = (e) => {};
+  const handleChange = (e) => {
+    const {target} = e;
+    const {name,value} = e.target;
+    setForm({...form , [name]:value})
+  };
 
-  const handleSubmit = (e) => {};
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    setLoading(true);
+    emailjs.send('service_d4cf3ns',
+                 'template_m6ycyad',
+                 {
+                  from_name: form.name,
+                  to_name: 'Viraj',
+                  from_email: form.email,
+                  to_email : 'virajmurab567@yahoo.com',
+                  message: form.message
+                 },
+                 '9Eevkn-FpGU3HYRsX'
+                )
+                .then(() => {
+                  setLoading(false)
+                  alert('Thankyou,I will get back to you asap!');
+                  setForm({
+                    name:'',
+                    email:'',
+                    message:''
+                  })
+                } , (error)=>{
+                  setLoading(false)
+                  alert("Something went Wrong :(")
+                  console.log(error)
+                } )
+  };
   return (
     <div className="ml:mt-12 xl:flex-row flex-col-reverse flex gap-10 overflow-hidden">
       <motion.div
