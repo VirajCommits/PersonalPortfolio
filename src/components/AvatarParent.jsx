@@ -7,7 +7,7 @@ const AvatarParent = () => {
     return (
       <Canvas shadows camera={{ position: [0, 3, 3], fov: 50 }}>
         <OrbitControls />
-        <group scale={[2, 2, 2]}>
+        <group scale={[1.2, 1.2, 1.2]}>
           <Avatar />
         </group>
         <ambientLight intensity={1} />
