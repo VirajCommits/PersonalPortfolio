@@ -1,5 +1,7 @@
 import {
     mobile,
+    android,
+    basket,
     backend,
     creator,
     web,
@@ -23,6 +25,8 @@ import {
     jobit,
     tripguide,
     threejs,
+    basket2,
+    questrade,
   } from "../assets";
   
   export const navLinks = [
@@ -46,17 +50,17 @@ import {
       icon: web,
     },
     {
-      title: "React Native Developer",
+      title: "React Developer",
       icon: mobile,
     },
     {
-      title: "Backend Developer",
+      title: "Angular Developer",
       icon: backend,
     },
     {
-      title: "Content Creator",
-      icon: creator,
-    },
+      title:"Android Developer",
+      icon : android
+    }
   ];
   
   const technologies = [
@@ -79,10 +83,6 @@ import {
     {
       name: "React JS",
       icon: reactjs,
-    },
-    {
-      name: "Redux Toolkit",
-      icon: redux,
     },
     {
       name: "Tailwind CSS",
@@ -108,19 +108,15 @@ import {
       name: "figma",
       icon: figma,
     },
-    {
-      name: "docker",
-      icon: docker,
-    },
   ];
   
   const experiences = [
     {
-      title: "React.js Developer",
-      company_name: "Starbucks",
-      icon: starbucks,
+      title: "Angualar.js Developer",
+      company_name: "Questrade",
+      icon: questrade,
       iconBg: "#383E56",
-      date: "March 2020 - April 2021",
+      date: "May 2023 - August 2023",
       points: [
         "Developing and maintaining web applications using React.js and other related technologies.",
         "Collaborating with cross-functional teams including designers, product managers, and other developers to create high-quality products.",
