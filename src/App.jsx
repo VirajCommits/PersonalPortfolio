@@ -32,9 +32,7 @@ const App = () => {
           <Contact />
           <StarsCanvas />
         </div>
-        <div className="avatar-container" style={{ height: '80vh' }}>
-          <AvatarParent />
-        </div>
+
       </div>
     </BrowserRouter>
   );

@@ -10,6 +10,10 @@ import github from "./github.png";
 import menu from "./menu.svg";
 import questrade from "./quest.png";
 import close from "./close.svg";
+import asat from "./albertasat.png";
+import qrhunter from "./qrhunter.png"
+import wordle from "./wordle.png"
+import w2e from "./what2eat.png"
 
 import css from "./tech/css.png";
 import docker from "./tech/docker.png";
@@ -70,5 +74,9 @@ export {
   vLogo2,
   basket,
   android,
-  basket2
+  asat,
+  basket2,
+  qrhunter,
+  w2e,
+  wordle
 };

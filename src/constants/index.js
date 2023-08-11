@@ -27,6 +27,10 @@ import {
     threejs,
     basket2,
     questrade,
+    asat,
+    qrhunter,
+    wordle,
+    w2e
   } from "../assets";
   
   export const navLinks = [
@@ -112,56 +116,30 @@ import {
   
   const experiences = [
     {
-      title: "Angualar.js Developer",
+      title: "Angular.js Developer",
       company_name: "Questrade",
       icon: questrade,
       iconBg: "#383E56",
       date: "May 2023 - August 2023",
       points: [
-        "Developing and maintaining web applications using React.js and other related technologies.",
+        "Empowered brokers to add new brokerages and addresses when unable to locate them in the drop-down menus, while effectively patching the values for these new brokerages",
+        "Investigated and resolved crashing issues on Staff Journey's policy details page by fixing failing endpoints and integrating it with real data API’s. Demoed the accomplishment to co-founders.",
+        "Contributed to reducing technical debt by migrating the Add Mortgagee feature to the new Broker Journey. ",
         "Collaborating with cross-functional teams including designers, product managers, and other developers to create high-quality products.",
         "Implementing responsive design and ensuring cross-browser compatibility.",
-        "Participating in code reviews and providing constructive feedback to other developers.",
       ],
     },
     {
-      title: "React Native Developer",
-      company_name: "Tesla",
-      icon: tesla,
+      title: "FullStack Developer(Upcoming)",
+      company_name: "AlbertaSat",
+      icon: asat,
       iconBg: "#E6DEDD",
-      date: "Jan 2021 - Feb 2022",
+      date: "June 2023 - Present",
       points: [
-        "Developing and maintaining web applications using React.js and other related technologies.",
-        "Collaborating with cross-functional teams including designers, product managers, and other developers to create high-quality products.",
-        "Implementing responsive design and ensuring cross-browser compatibility.",
-        "Participating in code reviews and providing constructive feedback to other developers.",
-      ],
-    },
-    {
-      title: "Web Developer",
-      company_name: "Shopify",
-      icon: shopify,
-      iconBg: "#383E56",
-      date: "Jan 2022 - Jan 2023",
-      points: [
-        "Developing and maintaining web applications using React.js and other related technologies.",
-        "Collaborating with cross-functional teams including designers, product managers, and other developers to create high-quality products.",
-        "Implementing responsive design and ensuring cross-browser compatibility.",
-        "Participating in code reviews and providing constructive feedback to other developers.",
-      ],
-    },
-    {
-      title: "Full stack Developer",
-      company_name: "Meta",
-      icon: meta,
-      iconBg: "#E6DEDD",
-      date: "Jan 2023 - Present",
-      points: [
-        "Developing and maintaining web applications using React.js and other related technologies.",
-        "Collaborating with cross-functional teams including designers, product managers, and other developers to create high-quality products.",
-        "Implementing responsive design and ensuring cross-browser compatibility.",
-        "Participating in code reviews and providing constructive feedback to other developers.",
-      ],
+        "Contributed to AlbertaSat's GroundStation Software team by successfully completing a mini-project that involved implementing Object-Oriented Programming (OOP) concepts in C.",
+        "Developed TCP/IP client and server applications using Python, showcasing proficiency in network programming and communication protocols.",
+        "Mastered React fundamentals through a comprehensive tutorial, enhancing skills in modern web development technologies."
+    ]
     },
   ];
   
@@ -194,33 +172,32 @@ import {
   
   const projects = [
     {
-      name: "Car Rent",
-      description:
-        "Web-based platform that allows users to search, book, and manage car rentals from various providers, providing a convenient and efficient solution for transportation needs.",
+      name: "QR-Hunter",
+      description: "IHuntWithJavalins is a project and team tasked with creating the Android mobile application called 'QRHunter'. This app allows us to hunt for the coolest QR codes that score the most points. Players will run around scanning QR codes, barcodes, etc. trying to find barcodes and QR codes that give them the most points.",
       tags: [
         {
-          name: "react",
+          name: "Android Studio",
           color: "blue-text-gradient",
         },
         {
-          name: "mongodb",
+          name: "Java",
           color: "green-text-gradient",
         },
         {
-          name: "tailwind",
+          name: "Figma",
           color: "pink-text-gradient",
         },
       ],
-      image: carrent,
-      source_code_link: "https://github.com/",
+      image: qrhunter,
+      source_code_link: "https://github.com/CMPUT301W23T03/IHuntWithJavalins",
     },
     {
-      name: "Job IT",
+      name: "Wordle Solver",
       description:
-        "Web application that enables users to search for job openings, view estimated salary ranges for positions, and locate available jobs based on their current location.",
+        "The Wordle Solver is a program that helps users solve the popular word guessing game, Wordle. It uses a list of English words to generate all legible 5-letter words, and allows users to enter a combination of letters and symbols that represent their guess and the position of correct letters in that guess. The program then filters the list of words to find all possible matches based on the user's guess and symbols.",
       tags: [
         {
-          name: "react",
+          name: "python",
           color: "blue-text-gradient",
         },
         {
@@ -228,33 +205,37 @@ import {
           color: "green-text-gradient",
         },
         {
-          name: "scss",
+          name: "nltk library",
           color: "pink-text-gradient",
         },
       ],
-      image: jobit,
-      source_code_link: "https://github.com/",
+      image: wordle,
+      source_code_link: "https://github.com/VirajCommits/Wordle_Solver",
     },
     {
-      name: "Trip Guide",
+      name: "What2Eat(Hackathon Project)",
       description:
-        "A comprehensive travel booking platform that allows users to book flights, hotels, and rental cars, and offers curated recommendations for popular destinations.",
+        "What2Eat is an application that asks the end user to key in the ingredients they have available, and returns recipes using the closest match of ingredients. The recipes produced at the selection page will display the number of ingredients and the caloric value of the food from the API in case the user wishes to determine a health conscious choice.Future plans of reducing data usage to/and provide more results for the user to choose from, object recognition from an image in order to automatically consider available ingredients within constraints, display breakdown of nutritional value where available",
       tags: [
         {
-          name: "nextjs",
+          name: "react-js",
           color: "blue-text-gradient",
         },
         {
-          name: "supabase",
+          name: "firebase",
           color: "green-text-gradient",
         },
         {
-          name: "css",
+          name: "restAPI",
           color: "pink-text-gradient",
         },
+        {
+          name: "flask",
+          color: "blue-text-gradient",
+        },
       ],
-      image: tripguide,
-      source_code_link: "https://github.com/",
+      image: w2e,
+      source_code_link: "https://github.com/AaryanHazCompter/What2Eat-Error-418",
     },
   ];
   
