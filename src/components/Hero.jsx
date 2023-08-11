@@ -42,7 +42,7 @@ const Hero = () => {
               exit={{ opacity: 0 }} // Optional: Set exit opacity (if needed)
               className={`${styles.heroHeadText} text-white `}
             >
-              Hey!, I am <span className="text-[#915eff]">Viraj!</span>{" "}
+              Hi, I am <span className="text-[#915eff]">Viraj!</span>{" "}
             </motion.h1>
           </AnimatePresence>
           <AnimatePresence>
