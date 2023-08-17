@@ -42,7 +42,7 @@ const Hero = () => {
               exit={{ opacity: 0 }} 
               className={`${styles.heroHeadText} text-white `}
             >
-              Hi, I am <span className="text-[#915eff]">Murab!</span>{" "}
+              Hi, I am <span className="text-[#915eff]">Viraj!</span>{" "}
             </motion.h1>
           </AnimatePresence>
           <AnimatePresence>

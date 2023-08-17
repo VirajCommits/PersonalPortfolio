@@ -5,30 +5,15 @@ Command: npx gltfjsx@6.2.10 public/models/64d45b9df0367d075046dcc1.glb
 
 import React, { useEffect, useRef } from "react";
 import { useAnimations, useFBX, useGLTF } from "@react-three/drei";
-import { useAnimation } from "framer-motion";
 import { useFrame } from "@react-three/fiber";
 
 export function Avatar(props) {
-  const {animations} = props;
   const group = useRef();
   const { nodes, materials } = useGLTF("models/64d45b9df0367d075046dcc1.glb");
-
-  const { animations: typingAnimation } = useFBX("animations/Typing.fbx");
-  const { animations: burpeeAnimation } = useFBX("animations/Burpee.fbx");
-  const { animations: fallingAnimation } = useFBX("animations/Falling.fbx");
-  const { animations: maleSitting } = useFBX("animations/MaleSittingPose.fbx");
-  const { animations: sillyDancing } = useFBX("animations/SillyDancing.fbx");
   const { animations: waveAnimation } = useFBX("animations/Waving.fbx");
-  console.log(typingAnimation)
 
-  typingAnimation[0].name = "Typing";
-  burpeeAnimation[0].name = "Burpee";
-  fallingAnimation[0].name = "Falling";
-  maleSitting[0].name = "Sitting";
-  sillyDancing[0].name = "Silly";
   waveAnimation[0].name = "Waving";
 
-  const a1 = useAnimations(burpeeAnimation, group).actions;
   const a2 = useAnimations(waveAnimation, group).actions;
   const animationInterval = 3000;
 
@@ -39,9 +24,6 @@ export function Avatar(props) {
   useEffect(() => {
     const playAnimations = async () => {
       await a2["Waving"].reset().play();
-      await new Promise((resolve) => setTimeout(resolve, animationInterval));
-
-      await a2["Waving"].reset().play();
     };
 
     playAnimations();
@@ -51,8 +33,7 @@ export function Avatar(props) {
       <group rotation-x={-Math.PI / 2}>
         
 
-        <primitive object={nodes.Hips} scale = {1} position = {[0,-1.25,-1.5] } />
-        {console.log("Here!" )}
+        <primitive object={nodes.Hips} scale = {0.6} position = {[0,-1.25,-1.5] } />
         <skinnedMesh
           geometry={nodes.Wolf3D_Body.geometry}
           material={materials.Wolf3D_Body}
