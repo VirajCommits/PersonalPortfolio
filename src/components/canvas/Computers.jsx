@@ -17,7 +17,7 @@ const Computers = ( {isMobile} ) => {
          castShadow
          shadow-mapSize = {1024}
          />
-        <primitive object={computer.scene} scale = { isMobile? 0.2:0.6} position = { isMobile ? [0,-3,-1] : [0,-3.25,-1.5] } />
+        <primitive object={computer.scene} scale = { isMobile? 0.4:0.6} position = { isMobile ? [0,-3,-1] : [0,-3.25,-1.5] } />
 
       </hemisphereLight>
     </mesh>
