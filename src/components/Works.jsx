@@ -7,6 +7,10 @@ import { projects } from "../constants";
 import { fadeIn, textVariant } from "../utils/motion";
 import StarWrapper from "../hoc/SectionWrapper";
 
+// }} className = "bg-tertiary p-5 rounded-2xl sm:w-[360px] w-full " >
+
+// <div className="relative w-full h-230px">
+
 const ProjectCard = ({
   index,
   name,
@@ -21,9 +25,9 @@ const ProjectCard = ({
         max:45,
         scale:1,
         speed:450,
-      }} className = "bg-tertiary p-5 rounded-2xl sm:w-[360px] w-full " >
+      }} className = "bg-tertiary p-5 rounded-2xl sm:w-[160px] w-full " >
 
-        <div className="relative w-full h-230px">
+        <div className="relative w-full h-130px">
           <img className="w-full h-full object-cover rounded-2xl" src= {image} alt="" />
           <div className="absolute inset-0 flex justify-end m-3 card-img_hover ">
             <div onClick={() => window.open(source_code_link,"_blank")} className = "black-gradient w-10 h-10 rounded-full flex justify-center items-center cursor-pointer " >
