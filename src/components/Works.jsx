@@ -74,5 +74,4 @@ const Works = () => {
   );
 };
 
-export default Works
-// export default StarWrapper(Works, "works");
+export default StarWrapper(Works, "works");
