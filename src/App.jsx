@@ -4,16 +4,12 @@ import {
   About,
   Contact,
   Experience,
-  Feedbacks,
   Hero,
   Navbar,
   Tech,
   Works,
   StarsCanvas,
 } from "./components";
-import { Avatar } from "./components/Avatar";
-import { OrbitControls } from "@react-three/drei";
-import AvatarParent from "./components/AvatarParent";
 
 const App = () => {
   return (

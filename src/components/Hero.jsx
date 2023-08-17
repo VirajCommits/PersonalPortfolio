@@ -13,21 +13,21 @@ const Hero = () => {
   useEffect(() => {
     setTimeout(() => {
       setAvatarVisible(false);
-    }, 5000); // Change to the desired duration before fading out
+    }, 5000); 
   }, []);
 
   useEffect(() => {
     const timeoutId = setTimeout(() => {
-      setShowSpan(true); // After the timeout, set showSpan to true to render the span
-    }, 2000); // Adjust the duration (in milliseconds) as needed
+      setShowSpan(true); 
+    }, 2000); 
 
-    return () => clearTimeout(timeoutId); // Clear the timeout if the component unmounts
-  }, []); // Empty dependency array ensures the effect runs once after initial render
+    return () => clearTimeout(timeoutId); 
+  }, []); 
 
   return (
     <section className="relative w-full h-screen mx-auto">
       <div
-        className={`${styles.paddingX} absolute inset-0 top-[120px] max-w-7xl mx-auto flex flex-row items-start gap-5 `}
+        className={`${styles.paddingX} absolute inset-0 top-[100px] max-w-7xl mx-auto flex flex-row items-start gap-5 `}
       >
         <div className="flex flex-col justify-center items-center mt-5 ">
           <div className="w-5 h-5 rounded-full bg-[#915eff] " />
@@ -36,23 +36,23 @@ const Hero = () => {
         <div className="">
           <AnimatePresence>
             <motion.h1
-              initial={{ opacity: 0 }} // Set initial opacity to 0
-              animate={{ opacity: 1 }} // Animate opacity to 1
-              transition={{ duration: 1 }}
-              exit={{ opacity: 0 }} // Optional: Set exit opacity (if needed)
+              initial={{ opacity: 0 }} 
+              animate={{ opacity: 1 }} 
+              transition={{ duration: 3 }}
+              exit={{ opacity: 0 }} 
               className={`${styles.heroHeadText} text-white `}
             >
               Hi, I am <span className="text-[#915eff]">Viraj!</span>{" "}
             </motion.h1>
           </AnimatePresence>
           <AnimatePresence>
-            {showSpan && ( // Render the span conditionally based on the showSpan state
+            {showSpan && ( 
               <motion.p
                 className={`${styles.heroSubText}`}
-                initial={{ opacity: 0, translateX: 1000 }} // Set initial opacity to 0
-                animate={{ opacity: 1, translateX: 0 }} // Animate opacity to 1
+                initial={{ opacity: 0, translateX: 1000 }} 
+                animate={{ opacity: 1, translateX: 0 }} 
                 transition={{ duration: 0.5 }}
-                exit={{ opacity: 0 }} // Optional: Set exit opacity (if needed)
+                exit={{ opacity: 0 }} 
                 variants={textVariant()}
               >
                 I am a passionate FullStack WebDeveleoper{" "}
@@ -69,7 +69,7 @@ const Hero = () => {
             initial={{ opacity: 0 }}
             animate = {{opacity:2}}
             exit={{ opacity: 0 }}
-            transition={{ duration: 1 }}
+            transition={{ duration: 5 }}
           >
             <AvatarParent />
           </motion.AvatarParent>
