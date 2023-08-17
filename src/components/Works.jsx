@@ -3,7 +3,6 @@ import { Tilt } from "react-tilt";
 import { motion } from "framer-motion";
 import { styles } from "../styles";
 import { github } from "../assets";
-import { SectionWrapper } from "../hoc";
 import { projects } from "../constants";
 import { fadeIn, textVariant } from "../utils/motion";
 import StarWrapper from "../hoc/SectionWrapper";
@@ -75,4 +74,5 @@ const Works = () => {
   );
 };
 
-export default StarWrapper(Works, "works");
+export default Works
+// export default StarWrapper(Works, "works");
