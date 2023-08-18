@@ -214,8 +214,7 @@ import {
     },
     {
       name: "What2Eat(Hackathon Project)",
-      description:
-        "What2Eat is an application that asks the end user to key in the ingredients they have available, and returns recipes using the closest match of ingredients. The recipes produced at the selection page will display the number of ingredients and the caloric value of the food from the API in case the user wishes to determine a health conscious choice.Future plans of reducing data usage to/and provide more results for the user to choose from, object recognition from an image in order to automatically consider available ingredients within constraints, display breakdown of nutritional value where available",
+      description: "What2Eat is an app where users input available ingredients, and it suggests recipes with the closest match. It shows ingredient count and calories for health-conscious choices. Future plans include optimizing data usage, expanding results, object recognition for ingredients, and nutritional breakdown display.",
       tags: [
         {
           name: "react-js",
