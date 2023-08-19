@@ -36,7 +36,7 @@ export function Avatar(props) {
       <group rotation-x={-Math.PI / 2}>
         
 
-        <primitive object={nodes.Hips} scale = {0.5} position = {[0,-1.25,-1.5] } />
+        <primitive object={nodes.Hips} scale = {0.6} position = {[0,-1.25,-1.5] } />
         <skinnedMesh
           geometry={nodes.Wolf3D_Body.geometry}
           material={materials.Wolf3D_Body}
