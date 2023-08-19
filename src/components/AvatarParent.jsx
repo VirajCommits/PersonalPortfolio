@@ -1,29 +1,50 @@
-import { OrbitControls, useGLTF } from "@react-three/drei";
+import { OrbitControls } from "@react-three/drei";
 import { Canvas } from "@react-three/fiber";
 import React, { useRef, useState } from "react";
 import { Avatar } from "./Avatar";
 
 const AvatarParent = () => {
   const cameraRef = useRef(); // Ref for camera
-  const [enableControls, setEnableControls] = useState(true); // State to enable/disable controls
+  const [isTouching, setIsTouching] = useState(false); // State to track touch events
 
   const handleTouchStart = () => {
-    setEnableControls(false); // Disable controls when touch starts
+    setIsTouching(true);
   };
 
   const handleTouchEnd = () => {
-    setEnableControls(true); // Enable controls when touch ends
+    setIsTouching(false);
   };
 
+  const handleWindowTouchStart = () => {
+    if (!isTouching) {
+      // Disable OrbitControls rotation and panning when touching the avatar
+      cameraRef.current.userData.controls.enabled = false;
+    }
+  };
+
+  const handleWindowTouchEnd = () => {
+    if (!isTouching) {
+      // Re-enable OrbitControls rotation and panning
+      cameraRef.current.userData.controls.enabled = true;
+    }
+  };
+
+  React.useEffect(() => {
+    window.addEventListener("touchstart", handleWindowTouchStart);
+    window.addEventListener("touchend", handleWindowTouchEnd);
+    return () => {
+      window.removeEventListener("touchstart", handleWindowTouchStart);
+      window.removeEventListener("touchend", handleWindowTouchEnd);
+    };
+  }, [isTouching]);
+
   return (
-    <Canvas
-      onTouchStart={handleTouchStart}
-      onTouchEnd={handleTouchEnd}
-    >
-      <perspectiveCamera ref={cameraRef} position={[0, 2, 3]} fov={40} />
-      <OrbitControls enableZoom={false} enabled={enableControls} />
+    <Canvas>
+      <perspectiveCamera ref={cameraRef} position={[0, 2, 3]} fov={40} userData={{ controls: null }}>
+        <OrbitControls ref={(controls) => (cameraRef.current.userData.controls = controls)} />
+      </perspectiveCamera>
       <group scale={[1, 1, 1]} position-y={-1.2}>
-        <Avatar />
+        <Avatar onTouchStart={handleTouchStart} onTouchEnd={handleTouchEnd} />
       </group>
       <ambientLight intensity={2} />
     </Canvas>
