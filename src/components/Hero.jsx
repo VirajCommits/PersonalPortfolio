@@ -4,7 +4,6 @@ import { ComputersCanvas } from "./canvas";
 import { slideIn, textVariant } from "../utils/motion";
 import AvatarParent from "./AvatarParent";
 import { useEffect, useState } from "react";
-import { Avatar } from "./Avatar";
 import StarWrapper from "../hoc/SectionWrapper";
 
 const Hero = () => {

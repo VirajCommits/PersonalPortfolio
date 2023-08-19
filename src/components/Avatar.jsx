@@ -21,19 +21,22 @@ export function Avatar(props) {
     group.current.getObjectByName("Head").lookAt(state.camera.position)
   })
 
+
   useEffect(() => {
     const playAnimations = async () => {
-      await a2["Waving"].reset().play();
+      a2["Waving"].reset().play();
     };
 
     playAnimations();
   }, [a2]);
+
+  
   return (
     <group {...props} ref={group} dispose={null}>
       <group rotation-x={-Math.PI / 2}>
         
 
-        <primitive object={nodes.Hips} scale = {0.8} position = {[0,-1.25,-1.5] } />
+        <primitive object={nodes.Hips} scale = {0.4} position = {[0,-1.25,-1.5] } />
         <skinnedMesh
           geometry={nodes.Wolf3D_Body.geometry}
           material={materials.Wolf3D_Body}
