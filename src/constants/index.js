@@ -173,7 +173,7 @@ import {
   const projects = [
     {
       name: "QR-Hunter",
-      description: "IHuntWithJavalins is a project and team tasked with creating the Android mobile application called 'QRHunter'. This app allows us to hunt for the coolest QR codes that score the most points. Players will run around scanning QR codes, barcodes, etc. trying to find barcodes and QR codes that give them the most points.",
+      description: "Hunt for high-score QR codes and barcodes through scanning.",
       tags: [
         {
           name: "Android Studio",
@@ -194,7 +194,7 @@ import {
     {
       name: "Wordle Solver",
       description:
-        "The Wordle Solver is a program that helps users solve the popular word guessing game, Wordle. It uses a list of English words to generate all legible 5-letter words, and allows users to enter a combination of letters and symbols that represent their guess and the position of correct letters in that guess. The program then filters the list of words to find all possible matches based on the user's guess and symbols.",
+      "Wordle Solver: Guessing aid for 5-letter words using symbols and hints.",
       tags: [
         {
           name: "python",
@@ -214,7 +214,7 @@ import {
     },
     {
       name: "What2Eat(Hackathon Project)",
-      description: "What2Eat is an app where users input available ingredients, and it suggests recipes with the closest match. It shows ingredient count and calories for health-conscious choices. Future plans include optimizing data usage, expanding results, object recognition for ingredients, and nutritional breakdown display.",
+      description: "Ingredient-Based Recipe Finder Application",
       tags: [
         {
           name: "react-js",
