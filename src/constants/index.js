@@ -130,7 +130,7 @@ import {
       ],
     },
     {
-      title: "FullStack Developer(Upcoming)",
+      title: "FullStack Developer(Current)",
       company_name: "AlbertaSat",
       icon: asat,
       iconBg: "#E6DEDD",
